@@ -91,7 +91,7 @@ const ScrollableComponent = (props) => {
     return (React.createElement("div", { ref: ref, className: classNames("scrollable-component", props.className), id: props.id, onMouseDown: handleOnMouseDown, onMouseMove: handleOnMouseMove, onMouseUp: handleOnMouseUp, onMouseLeave: handleOnMouseUp }, props.children));
 };
 const WeatherSnap = () => {
-    const [temperature] = React.useState(N.rand(, 85));
+    const [temperature] = React.useState(N.rand(65, 85));
     return (React.createElement("span", { className: "weather" },
         React.createElement("i", { className: "weather-type", className: "fa-duotone fa-sun" }),
         React.createElement("span", { className: "weather-temperature-value" }, temperature),
@@ -100,10 +100,10 @@ const WeatherSnap = () => {
 const Reminder = () => {
     return (React.createElement("div", { className: "reminder" },
         React.createElement("div", { className: "reminder-icon" },
-            React.createElement("i", { className: "fa-regular " })),
+            React.createElement("i", { className: "fa-regular fa-bell" })),
         React.createElement("span", { className: "reminder-text" },
-            " ",
-            React.createElement("span", { className: "reminder-time" }, ""))));
+            "Extra cool people meeting ",
+            React.createElement("span", { className: "reminder-time" }, "10AM"))));
 };
 const Time = () => {
     const date = useCurrentDateEffect();
